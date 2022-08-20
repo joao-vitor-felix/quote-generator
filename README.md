@@ -1,7 +1,7 @@
 # Quote Generator
 
 
-Este projeto foi criado para colocar em prática conhecimentos adquiridos com HTML, CSS, SASS e Javascript. O objetivo do projeto foi criar uma interface que recebe dados de uma API e as exibir na tela.
+Este projeto foi criado para colocar em prática conhecimentos adquiridos com HTML, CSS/SASS e Javascript. O objetivo do projeto foi criar uma interface que recebe dados de uma API e as exibi na tela.
 
 
 Layout do projeto:
