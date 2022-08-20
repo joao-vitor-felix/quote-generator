@@ -1,0 +1,101 @@
+@import "base";
+@import "variables";
+@import "media";
+@import "keyframes";
+
+.index {
+  .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid purple; /* Blue */
+    border-radius: 50%;
+    box-shadow: 3px 3px 20px white;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+}
+
+.quote-container {
+  max-width: 900px;
+  width: auto;
+  padding: 20px 30px;
+  border-radius: 15px;
+  background-color: rgba(83, 83, 83, 0.6);
+  box-shadow: 0 10px 10px 20px rgba(139, 134, 134, 0.2);
+
+  .quote-text {
+    #content {
+      font-size: 2rem;
+    }
+  }
+
+  .long-quote {
+    font-size: 1.5rem;
+  }
+
+  .quote-author {
+    margin-top: 15px;
+
+    #author {
+      font-size: 1.7rem;
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+
+  .long-quote-author {
+    font-size: 1.2rem;
+  }
+
+  .fa-quote-left {
+    font-size: 2rem;
+  }
+
+  .button-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background-color: white;
+      color: black;
+      font-size: 1rem;
+      font-family: "Poppins", sans-serif;
+      border-radius: 15px;
+      box-shadow: 0 0.3rem rgba(121, 121, 121, 0.3);
+
+      &:hover {
+        filter: brightness (110%);
+      }
+
+      &:active {
+        transform: translate (0, 0.3rem);
+        box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+      }
+    }
+
+    .twitter {
+      padding: 10px 20px;
+
+      &:hover {
+        color: #38a1f3;
+      }
+    }
+
+    .fa-twitter {
+      font-size: 1.5rem;
+    }
+
+    .new-quote {
+      padding: 15px;
+      font-weight: 700;
+
+      &:hover {
+        color: purple;
+      }
+    }
+  }
+}
