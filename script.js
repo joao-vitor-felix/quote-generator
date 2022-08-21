@@ -33,8 +33,8 @@ function quotes() {
     author.textContent = apiQuotes.author;
   }
 
-  // Check Quote lenght to style
-  if (apiQuotes.content.lenght > 5) {
+  // Check Quote length to style
+  if (apiQuotes.content.length > 120) {
     quote.classList.add("long-quote");
     author.classList.add("long-quote-author");
   } else {

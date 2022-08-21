@@ -22,7 +22,8 @@ body {
   .quote-container {
     margin: auto 13px;
   }
-  .quote-text {
+  #content,
+#author {
     font-size: 1rem;
   }
 }
@@ -64,7 +65,7 @@ body {
 .quote-container .quote-text #content {
   font-size: 2rem;
 }
-.quote-container .long-quote {
+.quote-container #content.long-quote {
   font-size: 1.5rem;
 }
 .quote-container .quote-author {
@@ -75,7 +76,7 @@ body {
   font-weight: 400;
   font-style: italic;
 }
-.quote-container .long-quote-author {
+.quote-container #author.long-quote-author {
   font-size: 1.2rem;
 }
 .quote-container .fa-quote-left {
