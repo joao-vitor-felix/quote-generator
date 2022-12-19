@@ -1,4 +1,3 @@
-// Variables
 const quoteContainer = document.getElementById("quote-container");
 const quote = document.getElementById("content");
 const author = document.getElementById("author");
@@ -7,18 +6,17 @@ const newQuote = document.getElementById("newQuote");
 const loader = document.getElementById("loader");
 let apiQuotes = [];
 
-// Show Laoding
 function loading() {
   loader.hidden = false;
   quoteContainer.hidden = true;
 }
-// Hide Loading
+
 function complete() {
   loader.hidden = true;
   quoteContainer.hidden = false;
 }
 
-// Twitter Integration
+
 function twitterButton() {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quote.textContent} - ${author.textContent}`;
   window.open(twitterUrl, "_blank");
@@ -26,14 +24,12 @@ function twitterButton() {
 
 function quotes() {
   loading();
-  // Check if Author field is blank and replace it
   if (!apiQuotes.author) {
     author.textContent = "Unknown";
   } else {
     author.textContent = apiQuotes.author;
   }
 
-  // Check Quote length to style
   if (apiQuotes.content.length > 120) {
     quote.classList.add("long-quote");
     author.classList.add("long-quote-author");
@@ -55,13 +51,11 @@ async function getQuotes() {
     quotes();
     return apiQuotes;
   } catch (error) {
-    // Catch Error Here
+  console.log(error)
   }
 }
 
-// Event Listeners
 newQuote.addEventListener("click", getQuotes);
 twitter.addEventListener("click", twitterButton);
 
-// On load
 getQuotes();
